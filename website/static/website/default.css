@@ -25,3 +25,9 @@ body {
     margin: auto;
     margin-top: 2%;
 }
+
+#weather-icon {
+    display: block;
+    width: 75px;
+    height: 75px;
+}

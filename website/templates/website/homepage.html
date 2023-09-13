@@ -31,11 +31,11 @@
                 </div>
                 <button type="submit" class="btn btn-primary button">Submit</button>
             </form>
-            <div class="col-12 mt-5">
+            <div class="col-12 mt-5 mb-2">
                 {% if weather_data %}
                     <h2 class="col-6 mx-auto">Current weather</h2>
                     <div class="col-12 col-lg-7 border rounded mx-auto">
-                        <img class="col-4 mx-auto" width="100px" height="100px" src="http://openweathermap.org/img/w/{{ weather_data.weather.0.icon }}.png" alt="Weather Icon"/>
+                        <img id="weather-icon" class="mx-auto" src="http://openweathermap.org/img/w/{{ weather_data.weather.0.icon }}.png" alt="Weather Icon"/>
                         <p class="col-7 mx-auto">Location: {{ weather_data.name }}, {{ weather_data.sys.country }}</p>
                         <p class="col-7 mx-auto">Temperature: {{ weather_data.main.temp|floatformat:0 }}</p>
                         <p class="col-7 mx-auto">Feels like: {{ weather_data.main.feels_like|floatformat:0 }}</p>
